@@ -1,0 +1,123 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("BsKHub", "DarkTheme")
+
+--Main
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Main")
+
+--Autofarm
+local Main = Window:NewTab("AutoFarm")
+local MainSection = Main:NewSection("AutoFarm")
+
+MainSection:NewToggle("AutoFarm", "Crown&Guard Quest.", function(state)
+    if state then
+        while true do
+
+
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5890, 8, 4862)
+            
+            wait(5)
+            
+            local args = {
+                [1] = "AdvanceStep",
+                [2] = {
+                    ["QuestName"] = "EarthQuest2",
+                    ["Step"] = 1
+                }
+            }
+            
+            game:GetService("ReplicatedStorage").NetworkFolder.GameFunction:InvokeServer(unpack(args))
+            
+            wait(1)
+            
+            local args = {
+                [1] = "AdvanceStep",
+                [2] = {
+                    ["QuestName"] = "EarthQuest2",
+                    ["Step"] = 2
+                }
+            }
+            
+            game:GetService("ReplicatedStorage").NetworkFolder.GameFunction:InvokeServer(unpack(args))
+            
+            wait(1)
+            
+            local args = {
+                [1] = "AdvanceStep",
+                [2] = {
+                    ["QuestName"] = "EarthQuest2",
+                    ["Step"] = 3
+                }
+            }
+            
+            game:GetService("ReplicatedStorage").NetworkFolder.GameFunction:InvokeServer(unpack(args))
+            
+            wait(1)
+            
+            local args = {
+                [1] = "AdvanceStep",
+                [2] = {
+                    ["QuestName"] = "EarthQuest2",
+                    ["Step"] = 4
+                }
+            }
+            
+            game:GetService("ReplicatedStorage").NetworkFolder.GameFunction:InvokeServer(unpack(args))
+            
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5895, 55, 5466)
+            
+            wait(5)
+            
+            local args = {
+                [1] = "AdvanceStep",
+                [2] = {
+                    ["QuestName"] = "EarthQuest3",
+                    ["Step"] = 1
+                }
+            }
+            
+            game:GetService("ReplicatedStorage").NetworkFolder.GameFunction:InvokeServer(unpack(args))
+            
+            wait(1)
+            
+            local args = {
+                [1] = "AdvanceStep",
+                [2] = {
+                    ["QuestName"] = "EarthQuest3",
+                    ["Step"] = 2
+                }
+            }
+            
+            game:GetService("ReplicatedStorage").NetworkFolder.GameFunction:InvokeServer(unpack(args))
+            
+            wait(1)
+            
+            local args = {
+                [1] = "AdvanceStep",
+                [2] = {
+                    ["QuestName"] = "EarthQuest3",
+                    ["Step"] = 3
+                }
+            }
+            
+            game:GetService("ReplicatedStorage").NetworkFolder.GameFunction:InvokeServer(unpack(args))
+            
+            
+            wait(1)
+            end
+    else
+        game.Players.LocalPlayer:Kick("Rejoin Again.")
+    end
+end)
+
+--Teleports
+local Main = Window:NewTab("Teleports")
+local MainSection = Main:NewSection("Quest")
+
+MainSection:NewButton("Air Temple Deliver Quest", "Tp to Deliver Npc.", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2061, 263, -2305)
+end)
+
+MainSection:NewButton("Water Fish Quest", "Tp to Fish Npc.", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(34, 11, 525)
+end)
